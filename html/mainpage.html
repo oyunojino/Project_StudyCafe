@@ -19,6 +19,11 @@
     <!-- 그 외의 css -->
     <link rel="stylesheet" href="common\css\html5 reset.css">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
     <style>
         .background {
             /* 모바일 버전일 때, 화면에 꽉차도록 */
@@ -29,7 +34,7 @@
 
             /* START SET1 */
             /* background-image: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/bg_default.png'); */
-            background-color: gray;
+            background-color: #555;
             background-position: center;
             background-size: cover;
             /* END SET1 */
@@ -37,6 +42,7 @@
             /* 화면 정중앙 */
             margin: auto;
         }
+
         .title {
             color: #fff;
             /* START SET2 - 가운데로 몰아주기 */
@@ -46,21 +52,109 @@
             align-items: center;
             /* END SET2 */
 
-            padding-top: 5vh;
+            padding-top: 3vh;
         }
-        /* .img_logo {
-            background-image: url();
-        } */
+
+        .img_logo {
+            /* border: 1px solid white; */
+            /* padding: 10px 0px; */
+            /* margin-bottom: 5px; */
+        }
+
+        .title>h1 {
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-size: 130px;
+        }
+
+        .title>h1>span {
+            font-weight: bolder;
+        }
+
+        .title>p {
+            font-size: 28px;
+            letter-spacing: 10px;
+            padding-top: 0.5vh;
+        }
+
+        .container {
+            border: 1px solid white;
+        }
+
+        .container>col {
+            border: 1px solid red;
+        }
+
+        .btn {
+            background-color: #3f3732;
+            color: white;
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 18px;
+
+            /* START SET2 - 가운데로 몰아주기 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* END SET2 */
+
+            /* 영역에 들어왔을 때 포인터 모양으로 바꾸기 */
+            cursor: pointer;
+
+            /* 무조건 붙어있는 것 */
+            position: fixed;
+            bottom: 16px;
+            /* 버튼을 중앙에 위치하도록 */
+            left: calc(50% - 150px);
+        }
+
+        .btn_group {
+            border: 1px solid white;
+            width: 100%;
+            /* position: fixed; */
+        }
+
+        .btn_group>row {
+            display: flex;
+            align-items: center;
+
+        }
     </style>
-    
+
 </head>
 
 <body>
     <div class="background">
         <div class="title">
-            <div class="img_logo"></div>
-            <h1>K-Study</h1>
+            <div class="img_logo"><img src="/img/hexagon_gray.png" alt="img_main_logo"></div>
+            <h1><span>K</span>-study</h1>
             <p>THE PREMIUM PLACE</p>
+        </div>
+
+        <div class="btn_group ">
+            <div class="row">
+                <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+            </div>
         </div>
     </div>
 </body>
